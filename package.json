@@ -1,0 +1,14 @@
+{
+  "name": "tobi-portfolio",
+  "version": "1.0.0",
+  "description": "Personal portfolio for Tobi \u2014 static site deployed on Vercel",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "node dev-server.js",
+    "start": "node dev-server.js"
+  }
+}

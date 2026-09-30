@@ -3,136 +3,121 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tobi — Fullstack Developer & Designer</title>
-  <meta name="description" content="Tobi is a freelance fullstack developer and UI designer based in Lagos, Nigeria. Node.js, APIs, web apps and product design." />
-  <meta property="og:title" content="Tobi — Developer & Designer" />
-  <meta property="og:description" content="Freelance fullstack developer and UI designer based in Lagos, Nigeria." />
+  <title>Oluwatobi Joel — Web Designer &amp; Data Analyst</title>
+  <meta name="description" content="Oluwatobi Joel is a freelance web designer and data analyst based in Maiduguri, Nigeria." />
+  <meta property="og:title" content="Oluwatobi Joel — Web Designer & Data Analyst" />
+  <meta property="og:description" content="Freelance web designer and data analyst based in Maiduguri, Nigeria." />
   <meta property="og:type" content="website" />
+  <meta property="og:image" content="/img/me.webp" />
   <link rel="icon" href="/img/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/css/style.css" />
 </head>
 <body>
-  <!-- ============ NAV ============ -->
-  <header class="nav" id="top">
-    <a href="#top" class="logo" aria-label="Tobi — home">
-      <span class="logo-mark">Tobi</span><span class="logo-dot">.</span>
-    </a>
-    <nav class="nav-links" aria-label="Main">
-      <a href="#work">Work</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <a class="btn btn-dark nav-cta" href="mailto:miracle@lfv.com.ng">miracle@lfv.com.ng</a>
-    <button class="menu-btn" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
-  </header>
+  <!-- ================= HOME (hero) ================= -->
+  <div class="stage" id="top">
+    <header class="nav">
+      <a href="#top" class="logo" aria-label="Oluwatobi — home">Oluwatobi<span>.</span></a>
+      <nav class="nav-links" aria-label="Main">
+        <a href="#design">Design</a>
+        <a href="#data">Data Analyst</a>
+        <a href="#about">About</a>
+        <span class="lang" aria-label="Language: English">EN</span>
+      </nav>
+      <a class="btn btn-dark nav-cta" href="mailto:helloluwatobix@gmail.com">helloluwatobix@gmail.com</a>
+      <button class="menu-btn" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+    </header>
 
-  <!-- ============ HERO ============ -->
-  <section class="hero">
-    <p class="hero-intro reveal"><span class="wave" aria-hidden="true">👋</span>, my name is Tobi and I am a freelance</p>
+    <section class="hero" aria-label="Introduction">
+      <p class="hero-intro"><span class="wave" aria-hidden="true">👋</span>, my name is Oluwatobi Joel and I am a freelancer</p>
 
-    <h1 class="hero-title" aria-label="Developer and Designer">
-      <span class="line solid reveal">Developer</span>
-      <span class="line outline reveal">&amp; Designer</span>
-      <a href="#work" class="hero-badge" aria-label="See my work">
-        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </a>
-    </h1>
+      <h1 class="hero-title">
+        <span class="solid">Web Designer</span>
+        <span class="outline">&amp; Data Analyst</span>
+      </h1>
 
-    <div class="hero-photo">
-      <img src="/img/me.png" alt="Portrait of Tobi" onerror="this.onerror=null;this.src='/img/me.svg'" />
-    </div>
+      <p class="hero-side" aria-hidden="true"><i></i>Design<br />/<br />Analyst</p>
 
-    <p class="hero-location reveal">based in Lagos, Nigeria.</p>
+      <picture class="hero-photo"><img src="/img/me.webp" alt="Oluwatobi Joel" width="800" height="985" fetchpriority="high" /></picture>
 
-    <ul class="hero-stack reveal" aria-label="Tools I work with">
-      <li>Node.js</li><li>React</li><li>PostgreSQL</li><li>Figma</li>
-    </ul>
+      <p class="hero-location">based in Maiduguri, Nigeria.</p>
 
-    <div class="hero-ctas">
-      <a href="#work" class="btn btn-dark" data-filter-link="development">You need a developer</a>
-      <a href="#work" class="btn btn-light" data-filter-link="design">You need a designer</a>
-    </div>
-  </section>
-
-  <!-- ============ MARQUEE ============ -->
-  <div class="marquee" aria-hidden="true">
-    <div class="marquee-track">
-      <span>Web apps</span><i>✦</i><span>REST APIs</span><i>✦</i><span>UI / UX design</span><i>✦</i><span>Dashboards</span><i>✦</i><span>Landing pages</span><i>✦</i><span>Design systems</span><i>✦</i>
-      <span>Web apps</span><i>✦</i><span>REST APIs</span><i>✦</i><span>UI / UX design</span><i>✦</i><span>Dashboards</span><i>✦</i><span>Landing pages</span><i>✦</i><span>Design systems</span><i>✦</i>
-    </div>
+      <div class="hero-ctas">
+        <a href="#design" class="btn btn-dark">You need a designer <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></a>
+        <a href="#data" class="btn btn-light">You need a data analyst <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></a>
+      </div>
+    </section>
   </div>
 
-  <!-- ============ WORK ============ -->
-  <section class="section" id="work">
-    <div class="section-head">
-      <h2 class="section-title">Selected <span class="outline-text">work</span></h2>
-      <div class="filters" role="tablist" aria-label="Filter projects">
-        <button class="chip is-active" data-filter="all" role="tab" aria-selected="true">All</button>
-        <button class="chip" data-filter="development" role="tab" aria-selected="false">Development</button>
-        <button class="chip" data-filter="design" role="tab" aria-selected="false">Design</button>
+  <main>
+    <!-- ================= DESIGN ================= -->
+    <section class="section" id="design">
+      <div class="section-head">
+        <h2 class="section-title">Web <span class="outline-text">Design</span></h2>
+        <p class="section-sub">Websites and interfaces that look sharp, load fast and turn visitors into customers.</p>
       </div>
-    </div>
-    <div class="grid" id="projects" aria-live="polite">
-      <div class="card skeleton"></div><div class="card skeleton"></div>
-    </div>
-  </section>
+      <div class="grid" data-projects="design"></div>
+    </section>
 
-  <!-- ============ ABOUT ============ -->
-  <section class="section about" id="about">
-    <h2 class="section-title">About <span class="outline-text">me</span></h2>
-    <div class="about-grid">
-      <div class="about-text">
-        <p class="lead">I build fast, reliable web products — from the database to the last pixel.</p>
-        <p>I'm a fullstack developer and designer based in Lagos. I help companies turn ideas into working software: clean Node.js back ends, APIs that scale, and interfaces people enjoy using. I've also worked with the Supertouch Kindness Foundation, building tools that serve real communities.</p>
-        <p>I care about clear communication, shipping on time, and code that the next person can read.</p>
-        <a class="btn btn-dark" href="#contact">Let's work together</a>
+    <!-- ================= DATA ================= -->
+    <section class="section" id="data">
+      <div class="section-head">
+        <h2 class="section-title">Data <span class="outline-text">Analyst</span></h2>
+        <p class="section-sub">Dashboards, reports and insights that help teams make better decisions.</p>
       </div>
-      <div class="about-side">
-        <div class="stats">
-          <div><strong>5+</strong><span>Years building</span></div>
-          <div><strong>30+</strong><span>Projects shipped</span></div>
-          <div><strong>100%</strong><span>Remote-ready</span></div>
-        </div>
-        <h3 class="mini-title">What I do</h3>
-        <ul class="skills">
-          <li>Node.js &amp; Express</li><li>REST &amp; GraphQL APIs</li><li>PostgreSQL</li><li>React / Next.js</li>
-          <li>HTML, CSS, JavaScript</li><li>Vercel &amp; CI/CD</li><li>UI / UX design</li><li>Figma prototyping</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+      <div class="grid" data-projects="data"></div>
+    </section>
 
-  <!-- ============ CONTACT ============ -->
-  <section class="section contact" id="contact">
-    <div class="contact-grid">
-      <div>
-        <h2 class="section-title">Let's <span class="outline-text">talk</span></h2>
-        <p class="lead">Have a project, a role, or an idea? Write me a message and I'll get back to you within 24 hours.</p>
-        <p class="contact-direct">Or email me directly:<br /><a href="mailto:miracle@lfv.com.ng">miracle@lfv.com.ng</a></p>
-      </div>
-      <form class="form" id="contact-form" novalidate>
-        <div class="row">
-          <label>Name<input name="name" required maxlength="100" autocomplete="name" /></label>
-          <label>Email<input name="email" type="email" required maxlength="200" autocomplete="email" /></label>
+    <!-- ================= ABOUT ================= -->
+    <section class="section about" id="about">
+      <h2 class="section-title">About <span class="outline-text">me</span></h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p class="lead">I design websites people enjoy using, and I turn raw data into clear answers.</p>
+          <p>I'm Oluwatobi Joel, a freelance web designer and data analyst based in Maiduguri, Nigeria. I work with founders, CEOs and teams to design modern websites, and to clean, analyse and visualise their data so they can act on it.</p>
+          <p>I care about clear communication, honest timelines, and work that holds up long after launch.</p>
+          <a class="btn btn-dark" href="#contact">Let's work together <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></a>
         </div>
-        <label><span>Company <span class="muted">(optional)</span></span><input name="company" maxlength="120" autocomplete="organization" /></label>
-        <label>Message<textarea name="message" rows="5" required maxlength="5000"></textarea></label>
-        <button class="btn btn-dark" type="submit">Send message</button>
-        <p class="form-status" role="status"></p>
-      </form>
-    </div>
-  </section>
+        <div class="about-side">
+          <h3 class="mini-title">Design</h3>
+          <ul class="skills"><li>Web design</li><li>UI / UX</li><li>Figma</li><li>Responsive websites</li><li>Landing pages</li><li>Branding</li></ul>
+          <h3 class="mini-title">Data</h3>
+          <ul class="skills"><li>Excel</li><li>SQL</li><li>Power BI</li><li>Python</li><li>Data cleaning</li><li>Dashboards &amp; reporting</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section class="section contact" id="contact">
+      <div class="contact-grid">
+        <div>
+          <h2 class="section-title">Let's <span class="outline-text">talk</span></h2>
+          <p class="lead">Have a project or a role in mind? Send me a message and I'll reply within 24 hours.</p>
+          <p class="contact-direct">Or email me directly:<br /><a href="mailto:helloluwatobix@gmail.com">helloluwatobix@gmail.com</a></p>
+        </div>
+        <form class="form" id="contact-form" novalidate>
+          <div class="row">
+            <label>Name<input name="name" required maxlength="100" autocomplete="name" /></label>
+            <label>Email<input name="email" type="email" required maxlength="200" autocomplete="email" /></label>
+          </div>
+          <label><span>Company <span class="muted">(optional)</span></span><input name="company" maxlength="120" autocomplete="organization" /></label>
+          <label>I need<select name="need"><option>A web designer</option><option>A data analyst</option><option>Both</option></select></label>
+          <label>Message<textarea name="message" rows="5" required maxlength="5000"></textarea></label>
+          <button class="btn btn-dark" type="submit">Send message <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></button>
+          <p class="form-status" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
 
   <footer class="footer">
-    <span>© <span id="year"></span> Tobi. Deployed on Vercel.</span>
+    <span>© <span id="year"></span> Oluwatobi Joel</span>
     <a href="#top">Back to top ↑</a>
   </footer>
 
   <script src="/js/main.js" type="module"></script>
-  <!-- Vercel Web Analytics (free, no database). Turn it on in Vercel > Project > Analytics. -->
   <script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>

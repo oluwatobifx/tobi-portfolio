@@ -1,5 +1,6 @@
 // ================= Oluwatobi portfolio — front-end logic =================
 import { projects } from './projects.js';
+import { saveMessage } from './supabase.js';
 
 const EMAIL = 'hellooluwatobix@gmail.com';
 const $ = (s, el = document) => el.querySelector(s);
@@ -60,10 +61,11 @@ $$('[data-projects]').forEach((grid) => {
 });
 $$('.reveal').forEach((el) => io.observe(el));
 
-// ---------- Contact form (opens the visitor's email app) ----------
+// ---------- Contact form (saves to Supabase, falls back to email) ----------
 const form = $('#contact-form');
 const status = $('.form-status', form);
-form.addEventListener('submit', (e) => {
+const sendBtn = $('button[type="submit"]', form);
+form.addEventListener('submit', async (e) => {
   e.preventDefault();
   const d = Object.fromEntries(new FormData(form));
   status.className = 'form-status';
@@ -72,9 +74,21 @@ form.addEventListener('submit', (e) => {
     status.classList.add('err');
     return;
   }
-  const subject = `${d.need} — enquiry from ${d.name}${d.company ? ` (${d.company})` : ''}`;
-  const body = `${d.message}\n\n—\n${d.name}${d.company ? `, ${d.company}` : ''}\n${d.email}`;
-  window.location.href = `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-  status.textContent = `Opening your email app… If nothing happens, email me at ${EMAIL}.`;
-  status.classList.add('ok');
+  sendBtn.disabled = true;
+  status.textContent = 'Sending…';
+  try {
+    await saveMessage({ name: d.name, email: d.email, company: d.company || null, need: d.need, message: d.message, page: location.pathname });
+    form.reset();
+    status.textContent = "Thanks! Your message has been sent. I'll reply within 24 hours.";
+    status.classList.add('ok');
+  } catch (err) {
+    console.warn(err);
+    const subject = `${d.need} — enquiry from ${d.name}${d.company ? ` (${d.company})` : ''}`;
+    const body = `${d.message}\n\n—\n${d.name}${d.company ? `, ${d.company}` : ''}\n${d.email}`;
+    window.location.href = `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    status.textContent = `Opening your email app… If nothing happens, email me at ${EMAIL}.`;
+    status.classList.add('ok');
+  } finally {
+    sendBtn.disabled = false;
+  }
 });

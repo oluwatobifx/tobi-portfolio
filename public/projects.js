@@ -24,9 +24,9 @@ export const projects = [
     category: 'design',
     description: 'Logistics marketplace for truck owners, warehousing and delivery companies.',
     image: '/project-logiflow.webp',
-    live: null,
-    repo: null,
-    tags: ['React Native', 'Supabase', 'Paystack', 'Maps'],
+    live: 'https://logistics-partner-network.vercel.app',
+    repo: 'https://github.com/oluwatobifx/Logistics-Partner-Network',
+    tags: ['HTML', 'CSS', 'JavaScript', 'Vercel'],
   },
   {
     title: 'Business Portfolio Website',

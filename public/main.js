@@ -32,14 +32,13 @@ const arrow = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9
 const label = { design: 'Web design', data: 'Data analysis' };
 
 function card(p) {
-  const main = p.live || p.repo;
+  const main = p.live;
   const media = p.image
     ? `<img src="${esc(p.image)}" alt="${esc(p.title)} preview" loading="lazy" />`
     : `<div class="card-placeholder" aria-hidden="true">${esc(p.title)}</div>`;
   const tags = (p.tags || []).map((t) => `<span>${esc(t)}</span>`).join('');
   const links = [
     p.live ? `<a href="${esc(p.live)}" target="_blank" rel="noopener">View live</a>` : '',
-    p.repo ? `<a href="${esc(p.repo)}" target="_blank" rel="noopener">Source</a>` : '',
   ].join('');
   return `
     <article class="card reveal">

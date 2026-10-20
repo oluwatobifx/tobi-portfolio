@@ -1,5 +1,5 @@
 // ================= Design & Data Analyst pages (shared) =================
-import { projects, GITHUB_PROFILE } from './projects.js';
+import { projects } from './projects.js';
 
 const $ = (s, el = document) => el.querySelector(s);
 const $$ = (s, el = document) => [...el.querySelectorAll(s)];
@@ -43,7 +43,6 @@ grid.innerHTML = list.map((p, i) => `
       <div class="tags">${(p.tags || []).map((t) => `<span>${esc(t)}</span>`).join('')}</div>
       <div class="pcard-links">
         ${linkHtml(p.live, liveLabel, 'i-globe')}
-        ${linkHtml(p.repo || GITHUB_PROFILE, 'GitHub', 'i-git')}
       </div>
     </div>
   </article>`).join('') || '<p>Projects coming soon.</p>';
@@ -58,7 +57,6 @@ function openProject(p) {
   $('#viewer-tags').innerHTML = (p.tags || []).map((t) => `<span>${esc(t)}</span>`).join('');
   $('#viewer-links').innerHTML = [
     p.live ? `<a class="btn btn-dark" href="${esc(p.live)}" target="_blank" rel="noopener">Visit Live Site ${icon('i-arrow')}</a>` : '',
-    `<a class="btn btn-light" href="${esc(p.repo || GITHUB_PROFILE)}" target="_blank" rel="noopener">View on GitHub ${icon('i-arrow')}</a>`,
   ].join('');
   viewer.showModal();
 }

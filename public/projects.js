@@ -15,9 +15,9 @@ export const projects = [
     category: 'design',
     description: 'AI platform for SMEs, with multi-tenant SaaS, billing, and analytics.',
     image: '/project-nexflow.webp',
-    live: null,
-    repo: null,
-    tags: ['React', 'Node.js', 'Supabase', 'Tailwind'],
+    live: 'https://nexflow-ai-theta.vercel.app',
+    repo: 'https://github.com/oluwatobifx/NexFlow-AI',
+    tags: ['HTML', 'CSS', 'JavaScript', 'Vercel'],
   },
   {
     title: 'Logistics Partner Network',

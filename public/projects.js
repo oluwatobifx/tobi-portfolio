@@ -31,11 +31,11 @@ export const projects = [
   {
     title: 'Business Portfolio Website',
     category: 'design',
-    description: 'A clean and modern business website with service pages and contact form.',
+    description: 'TechSolutions: a modern website that helps small businesses go digital, with online store and marketing services, a sales tracking dashboard and an import/export partner network.',
     image: '/project-techsolutions.webp',
-    live: null,
-    repo: null,
-    tags: ['Next.js', 'Tailwind', 'Sanity CMS', 'Vercel'],
+    live: 'https://tech-solution-kappa.vercel.app',
+    repo: 'https://github.com/oluwatobifx/Tech-Solution',
+    tags: ['HTML', 'CSS', 'JavaScript', 'Vercel'],
   },
   {
     title: 'Sales Performance Dashboard',

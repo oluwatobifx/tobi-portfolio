@@ -245,3 +245,22 @@ button { font: inherit; cursor: pointer; }
   .grid { grid-template-columns: 1fr; }
   .form .row { grid-template-columns: 1fr; }
 }
+
+/* ---------- Language switcher on tablet & phone ---------- */
+.lang-top { display: none; }
+.lang-top .lang { padding: 0 !important; border: 0 !important; margin: 0 !important; font-size: 15px; font-weight: 600; }
+.lang-top .lang::after { display: none !important; }
+@media (max-width: 1024px) {
+  /* the entrance animation left the dropdown menu's links unpainted on phones/tablets */
+  .nav > .nav-links { animation: none; }
+  .nav-links .lang-wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px; border-top: 1px solid var(--line); }
+  .nav-links .lang-wrap::before { content: 'Language'; }
+  .nav-links .lang-wrap .lang { border-top: 0 !important; padding: 14px 0; }
+}
+@media (min-width: 761px) and (max-width: 1024px) {
+  .lang-top { display: flex; align-items: center; position: absolute; right: calc(74 * var(--u) + 60px); top: max(6px, calc((114 * var(--u) - 44px) / 2)); height: 44px; }
+}
+@media (max-width: 760px) {
+  .lang-top { display: flex; align-items: center; margin-left: auto; }
+  .nav .lang-top ~ .menu-btn { margin-left: 6px; }
+}

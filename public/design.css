@@ -399,3 +399,11 @@ a[href^="mailto:"] { overflow-wrap: anywhere; }
 @media (max-width: 380px) {
   .facts li { white-space: normal; }
 }
+
+/* ---------- Language row inside the mobile menu ---------- */
+.menu-lang { display: none; }
+@media (max-width: 900px) {
+  .dnav.is-open .dnav-links .menu-lang { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 6px 0; border-top: 1px solid var(--line); font-size: 17px; }
+  .dnav-links .menu-lang::before { content: 'Language'; }
+  .dnav-links .menu-lang .lang { margin: 0; font-size: 15px; padding: 8px 0; }
+}

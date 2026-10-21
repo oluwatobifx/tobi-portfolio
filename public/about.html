@@ -10,8 +10,10 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" /></noscript>
   <link rel="stylesheet" href="/design.css" />
+  <link rel="modulepreload" href="/projects.js" />
 </head>
 <body class="page-about">
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -78,7 +80,7 @@
           <li><span class="ico ico-sq"><svg><use href="#i-mail"/></svg></span><div><small>Email</small><a href="mailto:hellooluwatobix@gmail.com">hellooluwatobix@gmail.com</a></div></li>
         </ul>
 
-        <img class="sig-full" src="/signature-full.webp" alt="Joel Emmanuel Oluwatobi signature" width="462" height="138" />
+        <img class="sig-full" loading="lazy" decoding="async" src="/signature-full.webp" alt="Joel Emmanuel Oluwatobi signature" width="462" height="138" />
       </div>
 
       <div class="dhero-visual">

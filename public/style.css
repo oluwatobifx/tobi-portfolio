@@ -264,3 +264,17 @@ button { font: inherit; cursor: pointer; }
   .lang-top { display: flex; align-items: center; margin-left: auto; }
   .nav .lang-top ~ .menu-btn { margin-left: 6px; }
 }
+
+/* ---------- Long / translated text: keep everything aligned & inside the screen ---------- */
+.hero-ctas .btn:first-child { width: auto; min-width: calc(271 * var(--u)); }
+.hero-ctas .btn:last-child { width: auto; min-width: calc(287 * var(--u)); }
+@media (min-width: 761px) {
+  .hero-ctas { max-width: calc(100% - 479 * var(--u) - 24px); }
+  .hero-ctas .btn { flex: 0 1 auto; height: auto; min-height: calc(58 * var(--u)); padding-top: calc(8 * var(--u)); padding-bottom: calc(8 * var(--u)); white-space: normal; text-align: center; line-height: 1.2; }
+}
+@media (max-width: 760px) {
+  .btn { white-space: normal; text-align: center; line-height: 1.25; }
+  .hero-ctas { max-width: 420px; }
+  .hero-ctas .btn { height: auto; min-height: 52px; padding: 12px 18px; }
+  .hero-intro, .hero-location { overflow-wrap: anywhere; }
+}

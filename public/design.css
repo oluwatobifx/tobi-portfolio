@@ -407,3 +407,10 @@ a[href^="mailto:"] { overflow-wrap: anywhere; }
   .dnav-links .menu-lang::before { content: 'Language'; }
   .dnav-links .menu-lang .lang { margin: 0; font-size: 15px; padding: 8px 0; }
 }
+
+/* ---------- Long / translated text on small screens ---------- */
+@media (max-width: 640px) {
+  .btn { height: auto; min-height: 50px; padding: 12px 20px; white-space: normal; text-align: center; line-height: 1.25; }
+  .cta-card .btn { min-height: 42px; }
+  h1, h2, h3, p, li, a { overflow-wrap: break-word; }
+}

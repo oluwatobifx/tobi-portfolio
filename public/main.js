@@ -22,6 +22,35 @@ $$('.nav-links a').forEach((a) => a.addEventListener('click', () => {
   menuBtn.setAttribute('aria-expanded', 'false');
 }));
 
+// ---------- Keep the big hero title inside the screen (any language) ----------
+const heroTitle = $('.hero-title');
+if (heroTitle) {
+  const lines = $$(':scope > span', heroTitle);
+  let queued = false;
+  const fit = () => {
+    queued = false;
+    lines.forEach((s) => { s.style.fontSize = ''; });
+    const vw = document.documentElement.clientWidth;
+    let stageRight = Math.min($('.stage').getBoundingClientRect().right, vw);
+    const side = $('.hero-side');
+    if (side && getComputedStyle(side).display !== 'none') stageRight = Math.min(stageRight, side.getBoundingClientRect().left + 4);
+    lines.forEach((s) => {
+      const r = s.getBoundingClientRect();
+      const abs = getComputedStyle(s).position === 'absolute';
+      const avail = abs ? stageRight - Math.max(r.left, 0) - 16 : vw - 24;
+      if (r.width > avail && r.width > 0) {
+        s.style.fontSize = (parseFloat(getComputedStyle(s).fontSize) * avail / r.width) + 'px';
+      }
+    });
+  };
+  const queue = () => { if (!queued) { queued = true; requestAnimationFrame(fit); } };
+  queue();
+  window.addEventListener('resize', queue);
+  window.addEventListener('load', queue);
+  if (document.fonts) { document.fonts.ready.then(queue); document.fonts.addEventListener('loadingdone', queue); }
+  new MutationObserver(queue).observe(heroTitle, { childList: true, characterData: true, subtree: true });
+}
+
 // ---------- Reveal on scroll ----------
 const io = new IntersectionObserver((entries) => {
   entries.forEach((en) => { if (en.isIntersecting) { en.target.classList.add('is-in'); io.unobserve(en.target); } });

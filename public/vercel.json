@@ -19,6 +19,24 @@
           "value": "SAMEORIGIN"
         }
       ]
+    },
+    {
+      "source": "/(.*)\\.(webp|png|jpg|jpeg|svg|ico)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=2592000, stale-while-revalidate=86400"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)\\.(css|js)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, stale-while-revalidate=604800"
+        }
+      ]
     }
   ]
 }

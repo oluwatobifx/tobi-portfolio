@@ -10,8 +10,10 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" /></noscript>
   <link rel="stylesheet" href="/design.css" />
+  <link rel="modulepreload" href="/projects.js" />
 </head>
 <body class="page-data">
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -71,7 +73,7 @@
       <div class="dhero-visual">
         <div class="panel" aria-hidden="true"></div>
         <img class="seated" src="/me-seated.webp" alt="Oluwatobi Joel" width="694" height="1050" fetchpriority="high" />
-        <img class="signature" src="/signature.webp" alt="" aria-hidden="true" width="561" height="309" />
+        <img class="signature" src="/signature.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" width="561" height="309" />
         <p class="side-note"><i></i>My name is<br /><b>Oluwatobi Joel.</b><br /><b>I'm a freelancer.</b></p>
         <div class="insight-card"><svg><use href="#i-bars"/></svg><p>Data turns problems into opportunities.</p></div>
       </div>

@@ -1,5 +1,5 @@
 // ============================================================
-//  YOUR PROJECTS — this file lives in your GitHub repo.
+//  YOUR PROJECTS: this file lives in your GitHub repo.
 //  Edit it, commit to GitHub, and Vercel redeploys the site.
 //
 //  category: 'design' → shows on the Design page (/design) and home page

@@ -1,4 +1,4 @@
-// ================= Oluwatobi portfolio — front-end logic =================
+// ================= Oluwatobi portfolio: front-end logic =================
 import { projects } from './projects.js';
 import { saveMessage } from './supabase.js';
 
@@ -111,8 +111,8 @@ form.addEventListener('submit', async (e) => {
     status.classList.add('ok');
   } catch (err) {
     console.warn(err);
-    const subject = `${d.need} — enquiry from ${d.name}${d.company ? ` (${d.company})` : ''}`;
-    const body = `${d.message}\n\n—\n${d.name}${d.company ? `, ${d.company}` : ''}\n${d.email}`;
+    const subject = `${d.need}: enquiry from ${d.name}${d.company ? ` (${d.company})` : ''}`;
+    const body = `${d.message}\n\n${d.name}${d.company ? `, ${d.company}` : ''}\n${d.email}`;
     window.location.href = `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     status.textContent = `Opening your email app… If nothing happens, email me at ${EMAIL}.`;
     status.classList.add('ok');

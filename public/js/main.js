@@ -1,4 +1,4 @@
-// ================= Tobi portfolio — front-end logic =================
+// ================= Tobi portfolio: front-end logic =================
 import { projects } from './projects.js';
 
 const EMAIL = 'miracle@lfv.com.ng';
@@ -93,7 +93,7 @@ form.addEventListener('submit', (e) => {
     return;
   }
   const subject = `Portfolio enquiry from ${d.name}${d.company ? ` (${d.company})` : ''}`;
-  const body = `${d.message}\n\n—\n${d.name}${d.company ? `, ${d.company}` : ''}\n${d.email}`;
+  const body = `${d.message}\n\n${d.name}${d.company ? `, ${d.company}` : ''}\n${d.email}`;
   window.location.href = `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   status.textContent = `Opening your email app… If nothing happens, email me at ${EMAIL}.`;
   status.classList.add('ok');

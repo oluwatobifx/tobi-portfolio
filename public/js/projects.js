@@ -1,5 +1,5 @@
 // ============================================================
-//  YOUR PROJECTS — edit this list, save, and push to GitHub.
+//  YOUR PROJECTS: edit this list, save, and push to GitHub.
 //  Vercel redeploys automatically.
 //
 //  category:  'development' or 'design'

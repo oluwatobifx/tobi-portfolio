@@ -29,10 +29,10 @@ export const projects = [
     tags: ['HTML', 'CSS', 'JavaScript', 'Vercel'],
   },
   {
-    title: 'Business Portfolio Website',
+    title: 'Tech Partner Network',
     category: 'design',
-    description: 'TechSolutions: a modern website that helps small businesses go digital, with online store and marketing services, a sales tracking dashboard and an import/export partner network.',
-    image: '/project-techsolutions.webp',
+    description: 'Tech Partner Network: a modern website that helps small businesses go digital, with online store and marketing services, a sales tracking dashboard and an import/export partner network.',
+    image: '/project-techpartner.webp',
     live: 'https://tech-solution-kappa.vercel.app',
     repo: 'https://github.com/oluwatobifx/Tech-Solution',
     tags: ['HTML', 'CSS', 'JavaScript', 'Vercel'],

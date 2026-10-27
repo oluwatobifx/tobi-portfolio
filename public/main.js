@@ -1,6 +1,6 @@
 // ================= Oluwatobi portfolio: front-end logic =================
-import { projects } from './projects.js';
-import { saveMessage } from './supabase.js';
+import { projects } from './projects.js?v=20261027';
+import { saveMessage } from './supabase.js?v=20261027';
 
 const EMAIL = 'hellooluwatobix@gmail.com';
 const $ = (s, el = document) => el.querySelector(s);

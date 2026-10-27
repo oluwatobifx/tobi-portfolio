@@ -1,5 +1,5 @@
 // ================= Design & Data Analyst pages (shared) =================
-import { projects } from './projects.js';
+import { projects } from './projects.js?v=20261027';
 
 const $ = (s, el = document) => el.querySelector(s);
 const $$ = (s, el = document) => [...el.querySelectorAll(s)];

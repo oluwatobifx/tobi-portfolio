@@ -32,7 +32,7 @@ export const projects = [
     title: 'Logistics Partner Network',
     category: 'design',
     description: 'Logistics marketplace for truck owners, warehousing and delivery companies.',
-    image: '/project-logiflow.webp',
+    image: '/project-logistics-network.webp',
     live: 'https://logistics-partner-network.vercel.app',
     repo: 'https://github.com/oluwatobifx/Logistics-Partner-Network',
     tags: ['HTML', 'CSS', 'JavaScript', 'Vercel'],

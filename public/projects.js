@@ -11,6 +11,15 @@
 // ============================================================
 export const projects = [
   {
+    title: 'Lamcy Photography & Videography',
+    category: 'design',
+    description: 'Photography and videography studio site shaped like a hard-cover book: open the cover, turn the photo pages, tap any picture to view it full screen, and book a shoot with live pricing sent on WhatsApp.',
+    image: '/project-lamcy.webp',
+    live: 'https://lamcy-photography.vercel.app',
+    repo: 'https://github.com/oluwatobifx/Lamcy-Photography',
+    tags: ['HTML', 'CSS', 'JavaScript', 'Vercel'],
+  },
+  {
     title: 'NexFlow AI',
     category: 'design',
     description: 'AI platform for SMEs, with multi-tenant SaaS, billing, and analytics.',
